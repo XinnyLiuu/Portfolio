@@ -29,8 +29,7 @@ app.set('view engine', 'hbs');
 // HTTP to HTTPS Redirect
 app.use(function(req, res, next) {
   if(prodMode && !req.secure) {
-    res.redirect('https://www.xinnliu.com' + req.url);
-    console.log('REDIRECT BABY ')
+    res.redirect('https://www.xinnliu.com');
   } else next();
 });
 
