@@ -30,6 +30,7 @@ app.set('view engine', 'hbs');
 app.use(function(req, res, next) {
   if(prodMode && !req.secure) {
     res.redirect('https://www.xinnliu.com' + req.url);
+    console.log('REDIRECT BABY ')
   } else next();
 });
 
