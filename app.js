@@ -33,7 +33,7 @@ app.use(function(req, res, next) {
 });
 
 // Routes for CSS, JS etc.
-app.use(express.static(path.join(__dirname, 'public'), { redirect: false }));
+app.use(express.static(path.join(__dirname, '/public'), { redirect: false }));
 
 // Express Config
 app.use(bodyParser.urlencoded({extended: true}));
