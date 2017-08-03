@@ -13,8 +13,20 @@ const http = require('http');
 // Routes
 const staticController = require('./controller/static');
 
+const prodMode = process.env.NODE_ENV === "production";
+
 // Express Server
 const app = express();
+
+// Force Https
+app.get('*',function(req,res,next){
+  if(req.headers['x-forwarded-proto']!='https' && prodMode) {
+    res.redirect('https://mypreferreddomain.com'+req.url);
+  }
+  else {
+    next();
+  }
+});
 
 // View Engine
 const hbs = exphbs.create({
