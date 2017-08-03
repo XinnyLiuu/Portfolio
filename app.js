@@ -21,7 +21,7 @@ const app = express();
 // Force Https
 app.get('*',function(req,res,next){
   if(req.headers['x-forwarded-proto']!='https' && prodMode) {
-    res.redirect('https://mypreferreddomain.com'+req.url);
+    res.redirect('https://www.xinnliu.com.com' + req.url);
   }
   else {
     next();
