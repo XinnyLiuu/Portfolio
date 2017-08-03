@@ -13,8 +13,6 @@ const http = require('http');
 // Routes
 const staticController = require('./controller/static');
 
-// Production Mode
-const prodMode = process.env.NODE_ENV == "production";
 // Express Server
 const app = express();
 
@@ -24,13 +22,6 @@ const hbs = exphbs.create({
 });
 app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');
-
-// HTTP to HTTPS Redirect
-app.use(function(req, res, next) {
-  if(prodMode && !req.secure) {
-    res.redirect('https://www.xinnliu.com' + req.url);
-  } else next();
-});
 
 // Routes for CSS, JS etc.
 app.use(express.static(path.join(__dirname, '/public'), { redirect: false }));
