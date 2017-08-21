@@ -112,6 +112,11 @@ h6 {
     }
 }
 
+#slide-img-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .carousel-pics {
     text-align: center;
 }
