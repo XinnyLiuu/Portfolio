@@ -21,4 +21,16 @@ $(document).ready(function(){
           $(this).collapse('hide');
       }
   });
+
+	//navbar onclick scroll to div
+	$('a[href^="#"]').on('click', function(e) {
+		// 'a[href^="#"]' tells jquery to look for a href tag that has '#' in the tag.
+			e.preventDefault();
+			var refHash = this.hash;
+			var target = $(refHash);
+
+			$('html,body').animate({
+					'scrollTop': target.offset().top
+				}, 1000, 'swing');
+		});
 });
