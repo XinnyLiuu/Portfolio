@@ -9,6 +9,7 @@ const exphbs = require('express-handlebars');
 const path = require('path');
 const bodyParser = require('body-parser');
 const http = require('http');
+const morgan = require('morgan');
 
 // Routes
 const staticController = require('./controller/static');
@@ -18,7 +19,10 @@ const prodMode = process.env.NODE_ENV === "production";
 // Express Server
 const app = express();
 
-// Force Https
+// Logger
+app.use(morgan('dev'));
+
+// Force Https [for heroku]
 app.get('*',function(req,res,next){
   if(req.headers['x-forwarded-proto']!='https' && prodMode) {
     res.redirect('https://www.xinnliu.com' + req.url);
@@ -42,8 +46,8 @@ app.use(express.static(path.join(__dirname, '/public'), { redirect: false }));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(session({
   secret: process.env.SESSION_SECRET,
-  resave: false,
-  saveUninitialized: false
+  resave: true,
+  saveUninitialized: true
 }));
 app.use(validator());
 app.use(flash());
