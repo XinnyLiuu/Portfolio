@@ -17,7 +17,7 @@ exports.postHome = (req, res) => {
     req.assert('email', 'Please include your email!').isEmail();
     req.assert('message', 'Please include a message!').notEmpty();
 
-    const errors = req.validationErrors();
+    const errors = req.getValidationResult();
 
     if(errors) {
         req.flash('errors', errors);
