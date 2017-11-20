@@ -17,13 +17,6 @@ exports.postHome = (req, res) => {
     req.assert('email', 'Please include your email!').isEmail();
     req.assert('message', 'Please include a message!').notEmpty();
 
-    const errors = req.getValidationResult();
-
-    if(errors) {
-        req.flash('errors', errors);
-        return res.redirect('/');
-    }
-
     const mailOptions = {
         to: process.env.MAILER_USER,
         subject: 'Message Received From ' + req.body.name + ' @ ' + req.body.email,
@@ -32,7 +25,7 @@ exports.postHome = (req, res) => {
 
     smtpTransport.sendMail(mailOptions, (error) => {
         if(error){
-            req.flash('errors', {msg: 'An error has occured. Please try again!'});
+            req.flash('error', {msg: 'An error has occured. Please try again!'});
             return res.redirect('/');
         }
          req.flash('success', {msg: 'Thanks for your time! I will get back to you as soon as possible!'});
