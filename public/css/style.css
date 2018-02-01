@@ -12,6 +12,10 @@ h6 {
     height: 100%;
 }
 
+.custom_caption {
+  font-weight: normal;
+  text-align: center;
+}
 /** Mobile-Responsive **/
 @media(max-width: 736px) {
     body .col-lg-12 {
