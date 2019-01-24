@@ -45,8 +45,8 @@ app.use(express.static(path.join(__dirname, '/public'), { redirect: false }));
 // Express Config
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(session({
-  // secret: process.env.SESSION_SECRET,
-  secret: "secret",
+  secret: process.env.SESSION_SECRET,
+  // secret: "secret",
   resave: true,
   saveUninitialized: true
 }));
