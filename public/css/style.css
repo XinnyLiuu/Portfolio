@@ -168,9 +168,10 @@ h6 {
     height: 100%;
     text-align: center;
     color: #f8f8f8;
-    background: url(../img/desk2.jpg) no-repeat center center;
+    background: url(../img/code2-min.jpg) no-repeat center center;
     background-size: cover;
     font-size: large;
+    opacity: 0.88;
 }
 
 .intro-message {

@@ -8,10 +8,16 @@ const smtpTransport = nodemailer.createTransport ({
   }
 });
 
+/** 
+ * Renders home view
+ */
 exports.getHome = (req, res) => {
     res.render('static/home');
 };
 
+/**
+ * Handles emails
+ */
 exports.postHome = (req, res) => {
     req.assert('name', 'Please include your name!').notEmpty();
     req.assert('email', 'Please include your email!').isEmail();
