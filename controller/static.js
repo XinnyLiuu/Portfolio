@@ -31,6 +31,14 @@ exports.getHome = (req, res) => {
 		"Pathfinder is a platform to provide Veterans with resources to ease them back into civilian life."
 	);
 	projects.push(pathfinder);
+	
+	let launderPOS = new Project(
+		"",
+		"img/projects/laundrypos.png",
+		"LaunderPOS",
+		"LaunderPOS is as a web based Point-Of-Sale system built specifically for Laundromats. Features live checkout, inventory updates, etc."
+	);
+	projects.push(launderPOS);
 
 	let smartmirror = new Project(
 		"",
@@ -113,11 +121,14 @@ exports.postHome = (req, res) => {
 
 	smtpTransport.sendMail(mailOptions, (error) => {
 		if (error) {
+			console.log(error);
+
 			req.flash('error', {
 				msg: 'An error has occured. Please try again!'
 			});
 			return res.redirect('/');
 		}
+		
 		req.flash('success', {
 			msg: 'Thanks for reaching out! I will get back to you as soon as possible!'
 		});
