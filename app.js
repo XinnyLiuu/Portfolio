@@ -1,4 +1,5 @@
 'use strict';
+
 // Modules
 const dotenv = require('dotenv').config();
 const express = require('express');
@@ -11,10 +12,10 @@ const bodyParser = require('body-parser');
 const http = require('http');
 const morgan = require('morgan');
 
+const prodMode = process.env.NODE_ENV === "production";
+
 // Routes
 const staticController = require('./controller/static');
-
-const prodMode = process.env.NODE_ENV === "production";
 
 // Express Server
 const app = express();
@@ -45,8 +46,8 @@ app.use(express.static(path.join(__dirname, '/public'), { redirect: false }));
 // Express Config
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(session({
-  secret: process.env.SESSION_SECRET,
-  // secret: "secret",
+  // secret: process.env.SESSION_SECRET,
+  secret: "secret",
   resave: true,
   saveUninitialized: true
 }));

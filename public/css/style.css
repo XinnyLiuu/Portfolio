@@ -6,270 +6,268 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Trebuchet MS", Helvetica, sans-serif;
-    font-weight: 600;
-    width: 100%;
-    height: 100%;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-weight: 600;
+	width: 100%;
+	height: 100%;
 }
 
-.custom_caption {
-  font-weight: normal;
-  text-align: center;
-}
 /** Mobile-Responsive **/
 @media(max-width: 736px) {
-    body .col-lg-12 {
-        top: auto;
-        bottom:auto;
-    }
+	body .col-lg-12 {
+		top: auto;
+		bottom: auto;
+	}
 
-    body .intro-message {
-        margin-top: 50%;
-    }
+	body .intro-message {
+		margin-top: 50%;
+	}
 
-    body .intro-message > h1 {
-        letter-spacing: 0.5px;
-    }
-    ul.intro-social-buttons > li {
-        display: block;
-        margin-bottom: 20px;
-        padding: 0;
-    }
+	body .intro-message>h1 {
+		letter-spacing: 0.5px;
+	}
 
-    ul.intro-social-buttons > li:last-child {
-        margin-bottom: 0;
-    }
+	ul.intro-social-buttons>li {
+		display: block;
+		margin-bottom: 20px;
+		padding: 0;
+	}
 
-    .btn-lg {
-        width: 150px;
-    }
+	ul.intro-social-buttons>li:last-child {
+		margin-bottom: 0;
+	}
 
-    .img-circle {
-        margin-left: 7em;
-        margin-top: 0;
-        margin-bottom: 0;
-        margin-right: 0;
-    }
+	.btn-lg {
+		width: 150px;
+	}
 
-    .col-sm-6 img {
-        width: 100%;
-    }
+	.img-circle {
+		margin-left: 7em;
+		margin-top: 0;
+		margin-bottom: 0;
+		margin-right: 0;
+	}
 
-    .img-contact {
-        display: none;
-    }
+	.col-sm-6 img {
+		width: 100%;
+	}
 
-    .col-lg-6 {
-        font-size: 0.75em;
+	.img-contact {
+		display: none;
+	}
 
-    }
+	.col-lg-6 {
+		font-size: 0.75em;
 
-    body .banner h2 {
-        margin: 0;
-        text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-        font-size: 3em;
-    }
+	}
 
-    ul.banner-social-buttons {
-        display: block;
-        margin-top: 50px;
-        right: 50%;
-        left: 50%;
-    }
+	body .banner h2 {
+		margin: 0;
+		text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+		font-size: 3em;
+	}
 
-    ul.banner-social-buttons > li {
-        display: block;
-        margin-bottom: 20px;
-        padding: 0;
-    }
+	ul.banner-social-buttons {
+		display: block;
+		margin-top: 50px;
+		right: 50%;
+		left: 50%;
+	}
 
-    ul.banner-social-buttons > li:last-child {
-        margin-bottom: 0;
-    }
+	ul.banner-social-buttons>li {
+		display: block;
+		margin-bottom: 20px;
+		padding: 0;
+	}
 
-    body p.copyright {
-        font-size: 1.5em;
-        margin-bottom: 5%;
-    }
+	ul.banner-social-buttons>li:last-child {
+		margin-bottom: 0;
+	}
 
-    body #contact-sent-phone {
-       margin-left: 15%;
-    }
+	body p.copyright {
+		font-size: 1.5em;
+		margin-bottom: 5%;
+	}
+
+	body #contact-sent-phone {
+		margin-left: 15%;
+	}
 }
 
 /** Smaller Laptops **/
 @media (min-width: 1280px) {
-    body .intro-message {
-        margin-top: 22%;
-    }
+	body .intro-message {
+		margin-top: 22%;
+	}
 }
 
 @media (min-width: 1440px) {
-    body .intro-message {
-        margin-top: 25%;
-    }
+	body .intro-message {
+		margin-top: 25%;
+	}
 }
 
 @media (min-width:1700px) {
-    body .intro-message {
-        margin-top: 30%;
-    }
+	body .intro-message {
+		margin-top: 30%;
+	}
 }
 
 .carousel-indicators li {
-  background-color: #222;
-  border: 1px solid #222;
+	background-color: #222;
+	border: 1px solid #222;
 }
 
 #slide-img-center {
-    margin-left: auto;
-    margin-right: auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .carousel-pics {
-    text-align: center;
+	text-align: center;
 }
 
 .topnav {
-    font-size: 14px;
-    background-color: #222;
+	font-size: 14px;
+	background-color: #222;
 }
 
 .col-lg-12 {
-    top:auto;
-    bottom: auto;
+	top: auto;
+	bottom: auto;
 }
 
 .scrollToTop {
-    width: 8em;
+	width: 8em;
 	height: 2em;
-    border-radius: 10em;
-    text-align: center;
+	border-radius: 10em;
+	text-align: center;
 	padding: 0.33em;
-	text-align:center;
+	text-align: center;
 	background: #222;
 	color: #FEFDFB;
-	position:fixed;
-    z-index: 1;
+	position: fixed;
+	z-index: 1;
 	top: 10%;
 	right: 10%;
-	display:none;
+	display: none;
 }
 
 
 .lead {
-    font-size: 18px;
-    font-weight: 400;
-    text-align: center;
+	font-size: 18px;
+	font-weight: 400;
+	text-align: center;
 }
 
 .intro-header {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    color: #f8f8f8;
-    background: url(../img/code2-min.jpg) no-repeat center center;
-    background-size: cover;
-    font-size: large;
-    opacity: 0.88;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	color: #f8f8f8;
+	background: url(../img/code2-min.jpg) no-repeat center center;
+	background-size: cover;
+	font-size: large;
+	opacity: 0.88;
 }
 
 .intro-message {
-    margin-top: 30%;
+	margin-top: 30%;
 }
 
-.intro-message > h1 {
-    margin: 0;
-    text-shadow: 3px 3px 5px rgba(0,0,0,0.6);
-    font-size: 4.5em;
-    letter-spacing: -3px;
+.intro-message>h1 {
+	margin: 0;
+	text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
+	font-size: 4.5em;
+	letter-spacing: -3px;
 }
 
 .intro-divider {
-    width: 50%;
-    border-top: 1px solid #f8f8f8;
-    border-bottom: 1px solid rgba(0,0,0,0.2);
+	width: 50%;
+	border-top: 1px solid #f8f8f8;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.intro-message > h3 {
-    text-shadow: 3px 3px 3px rgba(0,0,0,0.6);
+.intro-message>h3 {
+	text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
 }
 
 .network-name {
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 2px;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 2px;
 }
 
 .content-section-b {
-    padding: 50px 0;
-    background-color: #f8f8f8;
+	padding: 50px 0;
+	background-color: #f8f8f8;
 }
 
-.input, .textarea {
-    border: none;
-    width: 100%;
+.input,
+.textarea {
+	border: none;
+	width: 100%;
 }
 
 #submit_button {
-    display: inline-block;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    background-color: #fff;
-    color: black;
-    border: none;
-    text-align: center;
+	display: inline-block;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	background-color: #fff;
+	color: black;
+	border: none;
+	text-align: center;
 }
 
 #submit_button:hover {
-    color: #333;
-    background-color: #e6e6e6;
-    border-color: #adadad;
+	color: #333;
+	background-color: #e6e6e6;
+	border-color: #adadad;
 }
 
 #contact-me-sent {
-    display: none;
+	display: none;
 }
 
 .content-section-a {
-    padding: 50px 0;
-    border-top: 1px solid #e7e7e7;
-    border-bottom: 1px solid #e7e7e7;
+	padding: 50px 0;
+	border-top: 1px solid #e7e7e7;
+	border-bottom: 1px solid #e7e7e7;
 }
 
 .section-heading {
-    margin-bottom: 30px;
+	margin-bottom: 30px;
 }
 
 .section-heading-spacer {
-    width: 200px;
-    border-top: 3px solid #e7e7e7;
+	width: 200px;
+	border-top: 3px solid #e7e7e7;
 }
 
 .banner {
-    padding: 5em 0;
-    color: #f8f8f8;
-    background: url(../img/hustle.jpg) no-repeat center center;
-    background-size: cover;
+	padding: 5em 0;
+	color: #f8f8f8;
+	background: url(../img/hustle.jpg) no-repeat center center;
+	background-size: cover;
 }
 
 .banner h2 {
-    margin: 0;
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-    font-size: 3em;
+	margin: 0;
+	text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+	font-size: 3em;
 }
 
 .banner ul {
-    margin-bottom: 0;
-    margin-top: 3%;
+	margin-bottom: 0;
+	margin-top: 3%;
 }
 
 .banner-social-buttons {
-    margin-left: 30%;
+	margin-left: 30%;
 }
 
 p.copyright {
-    margin: 1em 0 0;
-    color: #f8f8f8;
+	margin: 1em 0 0;
+	color: #f8f8f8;
 }

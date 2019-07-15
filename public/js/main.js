@@ -1,39 +1,4 @@
-$(document).ready(function(){
-  //Scrolls to top of page
-	//Check to see if the window is top if not then display button
-	$(window).scroll(function(){
-		if ($(this).scrollTop()) {
-			$('.scrollToTop').fadeIn();
-		} else {
-			$('.scrollToTop').fadeOut();
-		}
-	});
-
-	//Click event to scroll to top
-	$('.scrollToTop').click(function(){
-		$('html, body').animate({scrollTop : 0},1500);
-	});
-
-  //mobile navbar collapse animation
-  $(document).on('click','.navbar-collapse.in',function(e) {
-      if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
-          $(this).collapse('hide');
-      }
-  });
-
-	//navbar onclick scroll to div
-	$('a[href^="#"]').on('click', function(e) {
-		// 'a[href^="#"]' tells jquery to look for a.href tag that has '#' in the tag.
-			e.preventDefault();
-			var refHash = this.hash; // takes the # in anchor tag
-			var target = $(refHash); // jquery-ify the hash
-
-			$('html,body').animate({
-					'scrollTop': target.offset().top // will scroll to the top of the target
-				}, 1500, 'swing');
-		});
-});
-
+// Slideshow code - taken from W3Schools
 var slideIndex = 1;
 showDivs(slideIndex);
 
