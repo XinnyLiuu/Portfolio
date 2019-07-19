@@ -41,7 +41,7 @@ app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');
 
 // Routes for CSS, JS etc.
-app.use(express.static(path.join(__dirname, '/public'), { redirect: false }));
+app.use(express.static(path.join(__dirname, './public'), { redirect: false }));
 
 // Express Config
 app.use(bodyParser.urlencoded({extended: true}));
@@ -57,6 +57,7 @@ app.use(flash());
 // Static Pages
 app.get('/', staticController.getHome);
 app.post('/', staticController.postHome);
+app.get('/resume', staticController.getResume);
 
 // Local Machine Testing and HTTP
 http.createServer(app).listen(process.env.PORT || 8000);

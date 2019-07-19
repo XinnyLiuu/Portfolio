@@ -1,3 +1,5 @@
+const fs = require('fs');
+
 /** 
  * GET / 
  * 
@@ -134,4 +136,15 @@ exports.postHome = (req, res) => {
 		});
 		res.redirect('/');
 	});
+};
+
+/** 
+ * GET /resume
+ * 
+ * Gets copy of resume in pdf
+ */
+exports.getResume = (req, res) => {
+	let resume = fs.readFileSync('./public/resume.pdf');
+	res.contentType('application/pdf');
+	res.send(resume);
 };
