@@ -19,7 +19,7 @@ exports.getHome = (req, res) => {
 	}
 
 	let stockswatch = new Project(
-		"http://ec2-18-220-186-209.us-east-2.compute.amazonaws.com/",
+		"http://stockswatch.tk/",
 		"img/projects/stockswatch.png",
 		"StocksWatch",
 		"StocksWatch is an Dockerized application to track the prices of specific stocks."
@@ -144,7 +144,7 @@ exports.postHome = (req, res) => {
  * Gets copy of resume in pdf
  */
 exports.getResume = (req, res) => {
-	let resume = fs.readFileSync('./public/resume.pdf');
+	let resume = fs.readFileSync('./public/Liu_Xin_Resume.pdf');
 	res.contentType('application/pdf');
 	res.send(resume);
 };
