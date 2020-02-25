@@ -33,7 +33,7 @@ exports.getHome = (req, res) => {
 		"Pathfinder is a platform to provide Veterans with resources to ease them back into civilian life."
 	);
 	projects.push(pathfinder);
-	
+
 	let launderPOS = new Project(
 		"",
 		"img/projects/laundrypos.png",
@@ -130,7 +130,7 @@ exports.postHome = (req, res) => {
 			});
 			return res.redirect('/');
 		}
-		
+
 		req.flash('success', {
 			msg: 'Thanks for reaching out! I will get back to you as soon as possible!'
 		});
@@ -140,6 +140,18 @@ exports.postHome = (req, res) => {
 
 /** 
  * GET /resume
+ * 
+ * Gets copy of resume in pdf
+ */
+exports.getResume = (req, res) => {
+	let resume = fs.readFileSync('./public/Liu_Xin_Resume_2.0.pdf');
+	res.contentType('application/pdf');
+	res.send(resume);
+};
+
+
+/** 
+ * GET /old_resume
  * 
  * Gets copy of resume in pdf
  */

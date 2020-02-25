@@ -24,18 +24,18 @@ const app = express();
 app.use(morgan('dev'));
 
 // Force Https [for heroku]
-app.get('*',function(req,res,next){
-  if(req.headers['x-forwarded-proto']!='https' && prodMode) {
-    res.redirect('https://www.xinnliu.com' + req.url);
-  }
-  else {
-    next();
-  }
+app.get('*', function (req, res, next) {
+	if (req.headers['x-forwarded-proto'] != 'https' && prodMode) {
+		res.redirect('https://www.xinnliu.com' + req.url);
+	}
+	else {
+		next();
+	}
 });
 
 // View Engine
 const hbs = exphbs.create({
-  defaultLayout: 'layouts.hbs',
+	defaultLayout: 'layouts.hbs',
 });
 app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');
@@ -44,12 +44,12 @@ app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, './public'), { redirect: false }));
 
 // Express Config
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(session({
-  // secret: process.env.SESSION_SECRET,
-  secret: "secret",
-  resave: true,
-  saveUninitialized: true
+	// secret: process.env.SESSION_SECRET,
+	secret: "secret",
+	resave: true,
+	saveUninitialized: true
 }));
 app.use(validator());
 app.use(flash());
@@ -58,6 +58,7 @@ app.use(flash());
 app.get('/', staticController.getHome);
 app.post('/', staticController.postHome);
 app.get('/resume', staticController.getResume);
+app.get('/old_resume', staticController.getResumeOld);
 
 // Local Machine Testing and HTTP
 http.createServer(app).listen(process.env.PORT || 8000);
