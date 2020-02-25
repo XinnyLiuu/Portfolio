@@ -155,7 +155,7 @@ exports.getResume = (req, res) => {
  * 
  * Gets copy of resume in pdf
  */
-exports.getResume = (req, res) => {
+exports.getResumeOld = (req, res) => {
 	let resume = fs.readFileSync('./public/Liu_Xin_Resume.pdf');
 	res.contentType('application/pdf');
 	res.send(resume);
