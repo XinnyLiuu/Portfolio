@@ -144,18 +144,6 @@ exports.postHome = (req, res) => {
  * Gets copy of resume in pdf
  */
 exports.getResume = (req, res) => {
-	let resume = fs.readFileSync('./public/Liu_Xin_Resume_2.0.pdf');
-	res.contentType('application/pdf');
-	res.send(resume);
-};
-
-
-/** 
- * GET /old_resume
- * 
- * Gets copy of resume in pdf
- */
-exports.getResumeOld = (req, res) => {
 	let resume = fs.readFileSync('./public/Liu_Xin_Resume.pdf');
 	res.contentType('application/pdf');
 	res.send(resume);
